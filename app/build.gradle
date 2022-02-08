@@ -4,6 +4,7 @@ dependencies {
     provided 'com.yuvimasory:orange-extensions:1.3.0'   // OSX support
     compile project(':api')
     runtime project(':services')
+    testCompile 'junit:junit:4.13.2'
 }
 
 version = parent.version
