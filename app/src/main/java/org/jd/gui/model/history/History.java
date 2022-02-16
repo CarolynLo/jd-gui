@@ -28,8 +28,6 @@ public class History {
             return;
         }
 
-//        System.out.println(uri.toString()+" "+current.toString());
-//        System.out.println(uri.getPath().toString()+" "+current.getPath().toString());
         if (uri.getPath().toString().equals(current.getPath().toString())) {
             if ((uri.getFragment() == null) && (uri.getQuery() == null)) {
                 // Ignore
