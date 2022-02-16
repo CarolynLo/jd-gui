@@ -46,7 +46,7 @@ public class NewHistoryTest extends TestCase {
          * it will only add the file instead of the compress data file
          */
 
-        // Navigate specific file in compressed data file
+        // Navigate specific file in compress data file
         history.backward();
         Assert.assertEquals(uriA, history.current);
         URI uriD = new URI("/User/Test/framework.jar#Framework");
@@ -67,7 +67,7 @@ public class NewHistoryTest extends TestCase {
         Assert.assertTrue(history.canForward()); // can forward after go back to the first uri
         Assert.assertEquals(uriE, history.forward()); // forward get the next uri
 
-        // Search specific file in compressed data file
+        // Search specific file in compress data file
         URI uriF = new URI("/User/Test/interface.jar");
         history.add(uriF);
         Assert.assertEquals(uriF, history.current);
@@ -88,17 +88,13 @@ public class NewHistoryTest extends TestCase {
         Assert.assertTrue(history.canForward()); // can forward after go back to the first uri
         Assert.assertEquals(uriH, history.forward()); // forward get the next uri
 
-        // Open specific file in compressed data file
+        // Open specific file in compress data file
         URI uriI = new URI("/User/Test/example.jar");
         history.add(uriI);
         Assert.assertEquals(uriI, history.current);
         URI uriJ = new URI("/User/Test/example.jar!/main.class");
         history.add(uriJ);
         Assert.assertEquals(uriJ, history.current);
-        URI uriK = new URI("/User/Test/example.jar!/app.class");
-        history.add(uriK);
-        Assert.assertEquals(uriK, history.current);
-        Assert.assertTrue(history.canBackward()); // can backward because the previous uri is another file
-        Assert.assertEquals(uriJ, history.backward()); // backward get the previous uri
+        Assert.assertNotEquals(uriI, history.backward()); // the compress data file will not be store to backward list
     }
 }
