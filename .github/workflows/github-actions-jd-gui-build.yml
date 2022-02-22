@@ -1,4 +1,4 @@
-name: GitHub Actions for jd-gui
+name: GitHub Actions for jd-gui build
 on: [push]
 jobs:
   Explore-GitHub-Actions:
