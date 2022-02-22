@@ -17,7 +17,6 @@ public class HistoryTest extends TestCase {
         Assert.assertEquals(uriA, history.current);
         Assert.assertFalse(history.canBackward()); // no backward
         Assert.assertFalse(history.canForward()); // no forward
-        Assert.assertNull("This is not null", history.current);
 
         // Add the second uri after the first uri
         URI uriB = new File("src/test/files/Four.class").toURI();
@@ -40,5 +39,8 @@ public class HistoryTest extends TestCase {
         Assert.assertEquals(uriA, history.backward()); // backward get the previous uri
         Assert.assertTrue(history.canForward()); // can forward after go back to the first uri
         Assert.assertEquals(uriC, history.forward()); // forward get the next uri
+        
+        // Test if GitHub Action works
+        Assert.assertEquals(0, 1);
     }
 }
