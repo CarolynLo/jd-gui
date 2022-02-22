@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - name: Unit Test
+      - name: Test NewHistoryTest (Success)
+        run: ./gradlew :app:test --tests org.jd.gui.model.history.NewHistoryTest
+      - name: Test HistoryTest (Fail)
         run: ./gradlew :app:test --tests org.jd.gui.model.history.HistoryTest
