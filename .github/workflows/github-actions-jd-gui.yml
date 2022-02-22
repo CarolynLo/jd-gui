@@ -4,5 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - name: Unit Test
         run: ./gradlew :app:test --tests org.jd.gui.model.history.HistoryTest
