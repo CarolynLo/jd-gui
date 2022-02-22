@@ -7,7 +7,6 @@ import java.net.URI;
 
 public class HistoryTest extends TestCase {
     public void testCurrentFileUri(){
-        System.out.println("Start testing HistoryTest.");
         History history  = new History();
         // Current history will be null at the beginning
         Assert.assertNull(history.current);
@@ -18,6 +17,7 @@ public class HistoryTest extends TestCase {
         Assert.assertEquals(uriA, history.current);
         Assert.assertFalse(history.canBackward()); // no backward
         Assert.assertFalse(history.canForward()); // no forward
+        Assert.assertNull("This is not null", history.current);
 
         // Add the second uri after the first uri
         URI uriB = new File("src/test/files/Four.class").toURI();
