@@ -1,1 +1,10 @@
-
+name: GitHub Actions for jd-gui newHistoryTest
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Test NewHistoryTest
+        run: ./gradlew :app:test --tests org.jd.gui.model.history.NewHistoryTest --info
