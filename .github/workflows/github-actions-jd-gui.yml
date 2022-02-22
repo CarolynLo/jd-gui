@@ -1,0 +1,8 @@
+name: GitHub Actions for jd-gui
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Unit Test
+        run: ./gradlew :app:test --tests org.jd.gui.model.history.HistoryTest
