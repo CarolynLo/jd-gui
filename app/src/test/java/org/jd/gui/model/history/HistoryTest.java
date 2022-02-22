@@ -7,6 +7,7 @@ import java.net.URI;
 
 public class HistoryTest extends TestCase {
     public void testCurrentFileUri(){
+        System.out.println("Start testing HistoryTest.");
         History history  = new History();
         // Current history will be null at the beginning
         Assert.assertNull(history.current);
