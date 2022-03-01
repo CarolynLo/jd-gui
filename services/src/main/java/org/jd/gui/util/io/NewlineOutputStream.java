@@ -18,6 +18,10 @@ public class NewlineOutputStream extends FilterOutputStream {
     public NewlineOutputStream(OutputStream os) {
         super(os);
 
+        initializeLineSeparator();
+    }
+    /** fixed code */
+    protected void initializeLineSeparator(){
         if (lineSeparator == null) {
             String s = System.getProperty("line.separator");
 
@@ -27,6 +31,11 @@ public class NewlineOutputStream extends FilterOutputStream {
             lineSeparator = s.getBytes(Charset.forName("UTF-8"));
         }
     }
+
+    protected byte[] getLineSeparator(){
+        return lineSeparator;
+    }
+    /** end */
 
     public void write(int b) throws IOException {
         if (b == '\n') {
