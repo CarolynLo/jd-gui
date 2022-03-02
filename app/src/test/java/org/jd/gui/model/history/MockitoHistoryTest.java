@@ -27,13 +27,13 @@ public class MockitoHistoryTest {
         Assert.assertEquals(0, spyHistory.forward.size());
 
         // print real backward() element
-        System.out.println(spyHistory.backward());
-        System.out.println(spyHistory.backward());
+        System.out.println("backward(): "+spyHistory.backward());
+        System.out.println("backward(): "+spyHistory.backward());
 
         Assert.assertEquals(2, spyHistory.forward.size());
 
         // print stubbed method
-        System.out.println(spyHistory.forward());
+        System.out.println("forward(): "+spyHistory.forward());
 
         // verification
         verify(spyHistory).add(new URI("/User/Test/framework.jar"));
