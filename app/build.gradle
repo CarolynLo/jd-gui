@@ -5,6 +5,9 @@ dependencies {
     compile project(':api')
     runtime project(':services')
     testCompile 'junit:junit:4.13.2'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation 'org.mockito:mockito-core:2.1.0'
+
 }
 
 version = parent.version
