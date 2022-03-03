@@ -7,14 +7,13 @@ import java.net.URI;
 
 public class HistoryTest extends TestCase {
     public void testCurrentFileUri(){
-        System.out.println("Start testing HistoryTest.");
+//        System.out.println("Start testing HistoryTest.");
         History history  = new History();
         // Current history will be null at the beginning
         Assert.assertNull(history.current);
 
         // Add the first uri
         URI uriA = new File("src/test/files/framework.jar").toURI();
-        System.out.println("1 add");
         history.add(uriA);
         Assert.assertEquals(uriA, history.current);
         Assert.assertFalse(history.canBackward()); // no backward
@@ -23,7 +22,6 @@ public class HistoryTest extends TestCase {
         // Add the second uri after the first uri
         URI uriB = new File("src/test/files/Four.class").toURI();
 
-        System.out.println("2 add");
         history.add(uriB);
         Assert.assertEquals(uriB, history.current);
         Assert.assertFalse(history.canForward()); // no forward
@@ -37,7 +35,6 @@ public class HistoryTest extends TestCase {
         Assert.assertEquals(uriA, history.current);
         URI uriC = new File("src/test/files/Five.class").toURI();
 
-        System.out.println("3 add");
         history.add(uriC);
         Assert.assertEquals(uriC, history.current);
         Assert.assertFalse(history.canForward()); // no forward
