@@ -66,6 +66,6 @@ Did JD-GUI help you to solve a critical situation? Do you use JD-Eclipse daily? 
 
 # [Testing Analysis](./Java_Decompiler_Testing_Analysis.pdf)
 
-I, Chih-Fan and Vinnie used what we learned from MSWE_Distribution Software Architecture class, to test this decompiler.
-We use black-box testing(partition and functional testing), white-box testing(structural testing and code coverage plugin), and Mocking(Mockito).
-And we also use the Continuous Integration tool(Github Action).
+- I, Chih-Fan and Vinnie used what we learned from MSWE_Distribution Software Architecture class, to test this decompiler.
+- We use black-box testing(partition and functional testing), white-box testing(structural testing and code coverage plugin), and Mocking(Mockito).
+- And we also use the Continuous Integration tool(Github Action).
