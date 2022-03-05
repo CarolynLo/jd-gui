@@ -64,8 +64,9 @@ Did JD-GUI help you to solve a critical situation? Do you use JD-Eclipse daily? 
 
 [![paypal](https://raw.githubusercontent.com/java-decompiler/jd-gui/master/src/website/img/btn_donate_euro.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=C88ZMVZ78RF22) [![paypal](https://raw.githubusercontent.com/java-decompiler/jd-gui/master/src/website/img/btn_donate_usd.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CRMXT4Y4QLQGU)
 
-# [Testing Report](./Java Decompiler Testing Analysis.pdf)
+# Testing Report
 
 I, Chih-Fan and Vinnie used what we learned from MSWE_Distribution Software Architecture class, to test this decompiler.
+Here is our [report](./Java Decompiler Testing Analysis.pdf)
 We use black-box testing(partition and functional testing), white-box testing(structural testing and code coverage plugin), and Mocking(Mockito).
 And we also use the Continuous Integration tool(Github Action).
